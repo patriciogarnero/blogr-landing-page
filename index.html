@@ -11,6 +11,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | [Blogr]</title>
@@ -26,35 +32,46 @@
           />
         </svg>
         <div class="nav-menu">
-          <a href="">Product</a>
-          <ul>
-            <li>Overview</li>
-            <li>Pricing</li>
-            <li>Marketplace</li>
-            <li>Features</li>
-            <li>Integrations</li>
-          </ul>
-          <a href="">Company</a>
-          <ul>
-            <li>About</li>
-            <li>Team</li>
-            <li>Blog</li>
-            <li>Careers</li>
-          </ul>
-          <a href="">Connect</a>
-          <ul>
-            <li>Contact</li>
-            <li>Newsletter</li>
-            <li>LinkedIn</li>
-          </ul>
+          <a class="accordion">Product</a>
+          <div class="panel show"> 
+            <a href="">Overview</a>
+            <a href="">Pricing</a>
+            <a href="">Marketplace</a>
+            <a href="">Features</a>
+            <a href="">Integrations</a>
+          </div>
+          <a class="accordion">Company</a>
+          <div class="panel">          <a href="">About</a>
+            <a href="">Team</a>
+            <a href="">Blog</a>
+            <a href="">Careers</a></div>
+
+
+          <a class="accordion">Connect</a>
+          <div class="panel">            <a href="">Contact</li>
+            <a href="">Newsletter</li>
+              <a href="">LinkedIn</li></div>
+
+          
           <a href="">Login</a>
           <a href="">Sign Up</a>
         </div>
+        <div class="grow"></div>
+        <div class="center-y">
+          <img
+            class="burguer-menu"
+            src="./images/icon-hamburger.svg"
+            alt="hamburguer-icon"
+          />
+        </div>
       </nav>
-      <div>
+      <div class="center-y intro-info">
         <h1>A modern publishing platform</h1>
-        <h6>Grow your audience and build your online brand</h6>
-        <span>Start for Free</span><span>Learn More</span>
+        <h4>Grow your audience and build your online brand</h4>
+        <div class="align-buttons">
+          <span class="button button-white">Start for Free</span>
+          <span class="button">Learn More</span>
+        </div>
       </div>
     </header>
     <section>
@@ -145,5 +162,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

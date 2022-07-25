@@ -14,14 +14,129 @@
   border: 1px solid red;
 }
 
+body {
+  font-family: "Overpass", sans-serif;
+}
+
 /*HEADER*/
 
 header {
   padding: 50px 0;
+  background-image: url("./images/bg-pattern-intro-mobile.svg"),
+    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-repeat: no-repeat;
+  background-position: -320px -300px, 0 0;
+  background-size: 350%, 100%;
+  border-radius: 0 0 0 100px;
+}
+
+nav {
+  display: flex;
+  padding: 0 5%;
+  position: relative;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .nav-menu {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+}
+
+.accordion {
+  background-color: white;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion::after {
+  content: " ";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 1%;
+  top: 2px;
+  background: url("./images/icon-arrow-dark.svg") no-repeat;
+}
+
+.active::after {
+  transform: rotate(180deg);
+  top: -2px;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
   display: none;
+  overflow: hidden;
+}
+
+.burguer-menu {
+  height: 20px;
+  width: 40px;
+}
+
+.center-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-info {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.intro-info h1,
+.intro-info h4 {
+  font-weight: 300;
+}
+
+.intro-info h1 {
+  padding: 30px 10% 0 10%;
+}
+.intro-info h4 {
+  padding: 10px 12% 0 12%;
+}
+
+.align-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 10% 90px 10%;
+}
+
+.button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: 130px;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.button-white {
+  background-color: white;
+  color: var(--ligth-red);
 }
 
 /*FOOTER*/
